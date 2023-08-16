@@ -1,0 +1,166 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* box-sizing özelliği, bir etiketin toplam genişliğine ve yüksekliğine padding ve border'ı dahil etmemizi sağlar.
+       Box-sizing değeri olarak border-box değeri atarsak ; bir etikette, padding ve border genişlik ve yüksekliğe dahil edilir.  */
+  }
+
+  body {
+      font-family: 'Poppins', sans-serif;
+      background-image: url("background.jpg");
+      background-size: cover;
+  }
+
+  a {
+      color: black;
+  }
+
+  .container {
+      width: 80%;
+      margin: auto;
+  }
+
+  /* header start */
+  header {
+      height: 100px;
+      border-bottom: 2px solid black;
+  }
+
+  header nav {
+      display: flex;
+      justify-content: space-between;
+      /* justify-content: between; esnek kutu içerisindeki ilk hat ana eksenin başlangıç (start) posizyonuna doğru
+      son hat ise ana-eksenin sonuna (end) doğru konumlanır. diğer hatlar bu iki hat arasında ana-eksene göre ortalı olur.
+      Her hat arasındaki boşluklar birbirine eşit olur. */
+      align-items: center;
+      height: 100%;
+  }
+
+  header nav .logo a {
+      color: black;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 20px;
+  }
+
+  header nav ul {
+      list-style: none;
+      display: flex;
+      column-gap: 30px;
+  }
+
+  header nav ul a {
+      color: black;
+      text-decoration: none;
+      transition: color .25s ease;
+  }
+
+  header nav ul a:hover {
+      color: white;
+  }
+
+
+  header nav .menu {
+      display: flex;
+      align-items: center;
+      column-gap: 48px;
+  }
+
+  header nav .menu .button-contect {
+      color: black;
+      text-decoration: none;
+      background-color: white;
+      padding: 12px 24px;
+      border-radius: 56px;
+      transition: all .25s ease;
+  }
+
+  header nav .menu .button-contect:hover {
+      background-color: black;
+      color: white;
+  }
+
+  /* header end */
+
+  /* section start */
+  .content {
+      color: black;
+      height: calc(100vh - 100px);
+      padding-top: 150px;
+  }
+
+  .content h1 {
+      font-size: 60px;
+      text-align: center;
+  }
+
+  .content p {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 32px;
+  }
+
+  .content .links {
+      display: flex;
+      justify-content: center;
+      margin-top: 48px;
+      column-gap: 16px;
+  }
+
+  .content .links a {
+    background-color: white ;
+    padding: 20px;
+    width: 180px;
+    color:black;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 56px;
+    transition: all .25s ease-in;
+  }
+  .content .links a:hover {
+    background-color: black;
+    color: white;
+  }
+
+  /* section end */
+
+  /* responsive start */
+  @media (max-width:576px) {
+      .container {
+          width: 100%;
+          padding-left: 12px;
+          padding-right: 12px;
+      }
+
+      .menu ul {
+          column-gap: 20px;
+      }
+
+      .menu .button-contect {
+          display: none;
+      }
+      .content{
+        padding-top: 50px;
+      }
+      .content h1{
+        font-size: 36px;
+      }
+      .content p{
+        font-size: 16px;
+      }
+      .content .links{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+      }
+      .content .links a{
+        padding: 14px;
+        width: 90%;
+      }
+  }
+
+  /* responsive end */
